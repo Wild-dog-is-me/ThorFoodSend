@@ -7,12 +7,10 @@ package org.dog.thor.filter;
  * @Date: 2022/07/12/8:37 PM
  */
 
-import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.dog.thor.common.R;
 import org.springframework.util.AntPathMatcher;
-import org.springframework.util.PathMatcher;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -24,7 +22,7 @@ import java.io.IOException;
  * 检查用户是否完成登陆
  */
 
-@WebFilter(filterName = "loginCheckFilter",urlPatterns = "/*")
+//@WebFilter(filterName = "loginCheckFilter",urlPatterns = "/*")
 @Slf4j
 public class LoginCheckFilter implements Filter{
     //路径匹配器，支持通配符
