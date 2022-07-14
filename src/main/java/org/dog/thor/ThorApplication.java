@@ -5,6 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,8 +17,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @Slf4j
 @SpringBootApplication
 @MapperScan("org.dog.thor.mapper")
-// 扫描过滤器
 @ServletComponentScan()
+@EnableTransactionManagement
 public class ThorApplication {
     public static void main(String[] args) {
         SpringApplication.run(ThorApplication.class);
